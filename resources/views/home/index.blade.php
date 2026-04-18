@@ -6,107 +6,119 @@
 
     {{-- HERO SLIDER --}}
     <section class="relative overflow-hidden bg-gradient-to-b from-orange-50 via-white to-white">
-        <div class="relative h-[72vh] min-h-[520px]" id="slider">
-            <div class="slide absolute inset-0 bg-cover bg-center opacity-100 transition-all duration-700"
-                 style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80');">
-                <div class="absolute inset-0 bg-slate-950/55"></div>
-                <div class="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-950/35 to-transparent"></div>
+        <div class="relative h-[58vh] min-h-[380px] sm:h-[72vh] sm:min-h-[560px]" id="slider">
+            <div class="absolute inset-0" id="sliderTrack">
+                <div class="slide absolute inset-0 bg-cover bg-center opacity-100 z-10 transition-opacity duration-700 ease-in-out"
+                     style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80');">
+                    <div class="absolute inset-0 bg-slate-950/55"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/75 via-slate-950/35 to-transparent"></div>
 
-                <div class="relative z-10 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
-                    <div class="max-w-2xl text-white">
-                        <span class="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/95 text-[12px] sm:text-sm font-semibold tracking-wide shadow-lg mb-5">
-                            New Collection
-                        </span>
+                    <div class="relative z-10 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+                        <div class="max-w-2xl text-white">
+                            <span class="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/95 text-[12px] sm:text-sm font-semibold tracking-wide shadow-lg mb-5">
+                                New Collection
+                            </span>
 
-                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.05] mb-5">
-                            Upgrade Your Everyday Style
-                        </h1>
+                            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.05] mb-4 sm:mb-5">
+                                Upgrade Your Everyday Style
+                            </h1>
 
-                        <p class="text-[15px] sm:text-lg font-medium text-slate-200/95 leading-7 mb-8 max-w-xl">
-                            Discover premium fashion, accessories, and lifestyle products designed for modern living.
-                        </p>
+                            <p class="text-sm sm:text-lg font-medium text-slate-200/95 leading-6 sm:leading-7 mb-6 sm:mb-8 max-w-xl">
+                                Discover premium fashion, accessories, and lifestyle products designed for modern living.
+                            </p>
 
-                        <div class="flex flex-wrap items-center gap-4">
-                            <a href="{{ route('shop') }}" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-orange-500 text-white text-sm sm:text-base font-semibold shadow-lg shadow-orange-500/25 hover:bg-orange-600 transition">
-                                Shop Now
+                            <div class="flex flex-wrap items-center gap-3 sm:gap-4">
+                                <a href="{{ route('shop') }}" class="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-orange-500 text-white text-sm sm:text-base font-semibold shadow-lg shadow-orange-500/25 hover:bg-orange-600 transition">
+                                    Shop Now
+                                    <x-heroicon-o-arrow-right class="w-5 h-5" />
+                                </a>
+
+                                <a href="{{ route('deals') }}" class="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white/12 backdrop-blur text-white text-sm sm:text-base font-semibold border border-white/20 hover:bg-white/20 transition">
+                                    Explore More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide absolute inset-0 bg-cover bg-center opacity-0 z-0 pointer-events-none transition-opacity duration-700 ease-in-out"
+                     style="background-image: url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1600&q=80');">
+                    <div class="absolute inset-0 bg-slate-950/55"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/75 via-slate-950/35 to-transparent"></div>
+
+                    <div class="relative z-10 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+                        <div class="max-w-2xl text-white">
+                            <span class="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/95 text-[12px] sm:text-sm font-semibold tracking-wide shadow-lg mb-5">
+                                Big Sale
+                            </span>
+
+                            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.05] mb-4 sm:mb-5">
+                                Fresh Looks, Better Prices
+                            </h1>
+
+                            <p class="text-sm sm:text-lg font-medium text-slate-200/95 leading-6 sm:leading-7 mb-6 sm:mb-8 max-w-xl">
+                                Grab the latest trends with exclusive discounts and stylish picks for every season.
+                            </p>
+
+                            <a href="{{ route('deals') }}" class="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-orange-500 text-white text-sm sm:text-base font-semibold shadow-lg shadow-orange-500/25 hover:bg-orange-600 transition">
+                                Explore Deals
                                 <x-heroicon-o-arrow-right class="w-5 h-5" />
                             </a>
+                        </div>
+                    </div>
+                </div>
 
-                            <a href="{{ route('deals') }}" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white/12 backdrop-blur text-white text-sm sm:text-base font-semibold border border-white/20 hover:bg-white/20 transition">
-                                Explore More
+                <div class="slide absolute inset-0 bg-cover bg-center opacity-0 z-0 pointer-events-none transition-opacity duration-700 ease-in-out"
+                     style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=80');">
+                    <div class="absolute inset-0 bg-slate-950/55"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/75 via-slate-950/35 to-transparent"></div>
+
+                    <div class="relative z-10 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+                        <div class="max-w-2xl text-white">
+                            <span class="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/95 text-[12px] sm:text-sm font-semibold tracking-wide shadow-lg mb-5">
+                                Trending Now
+                            </span>
+
+                            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.05] mb-4 sm:mb-5">
+                                Make Your Look Stand Out
+                            </h1>
+
+                            <p class="text-sm sm:text-lg font-medium text-slate-200/95 leading-6 sm:leading-7 mb-6 sm:mb-8 max-w-xl">
+                                Minimal, elegant, and bold — shop standout pieces curated for your lifestyle.
+                            </p>
+
+                            <a href="{{ route('shop') }}" class="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-orange-500 text-white text-sm sm:text-base font-semibold shadow-lg shadow-orange-500/25 hover:bg-orange-600 transition">
+                                View Collection
+                                <x-heroicon-o-arrow-right class="w-5 h-5" />
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="slide absolute inset-0 bg-cover bg-center opacity-0 pointer-events-none transition-all duration-700"
-                 style="background-image: url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1600&q=80');">
-                <div class="absolute inset-0 bg-slate-950/55"></div>
-                <div class="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-950/35 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-4 sm:bottom-8 z-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-end justify-between">
+                    <div id="sliderDots" class="flex items-center gap-2">
+                        <button type="button" class="slider-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition" data-slide="0" aria-label="Go to slide 1"></button>
+                        <button type="button" class="slider-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition" data-slide="1" aria-label="Go to slide 2"></button>
+                        <button type="button" class="slider-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition" data-slide="2" aria-label="Go to slide 3"></button>
+                    </div>
 
-                <div class="relative z-10 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
-                    <div class="max-w-2xl text-white">
-                        <span class="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/95 text-[12px] sm:text-sm font-semibold tracking-wide shadow-lg mb-5">
-                            Big Sale
-                        </span>
-
-                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.05] mb-5">
-                            Fresh Looks, Better Prices
-                        </h1>
-
-                        <p class="text-[15px] sm:text-lg font-medium text-slate-200/95 leading-7 mb-8 max-w-xl">
-                            Grab the latest trends with exclusive discounts and stylish picks for every season.
-                        </p>
-
-                        <a href="{{ route('deals') }}" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-orange-500 text-white text-sm sm:text-base font-semibold shadow-lg shadow-orange-500/25 hover:bg-orange-600 transition">
-                            Explore Deals
-                            <x-heroicon-o-arrow-right class="w-5 h-5" />
-                        </a>
+                    <div class="flex gap-2 sm:gap-3">
+                        <button id="prevSlide" type="button" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/90 hover:bg-white shadow-md border border-white/70 flex items-center justify-center transition">
+                            <x-heroicon-o-chevron-left class="w-5 h-5 text-slate-800" />
+                        </button>
+                        <button id="nextSlide" type="button" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/90 hover:bg-white shadow-md border border-white/70 flex items-center justify-center transition">
+                            <x-heroicon-o-chevron-right class="w-5 h-5 text-slate-800" />
+                        </button>
                     </div>
                 </div>
-            </div>
-
-            <div class="slide absolute inset-0 bg-cover bg-center opacity-0 pointer-events-none transition-all duration-700"
-                 style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=80');">
-                <div class="absolute inset-0 bg-slate-950/55"></div>
-                <div class="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-950/35 to-transparent"></div>
-
-                <div class="relative z-10 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
-                    <div class="max-w-2xl text-white">
-                        <span class="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/95 text-[12px] sm:text-sm font-semibold tracking-wide shadow-lg mb-5">
-                            Trending Now
-                        </span>
-
-                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.05] mb-5">
-                            Make Your Look Stand Out
-                        </h1>
-
-                        <p class="text-[15px] sm:text-lg font-medium text-slate-200/95 leading-7 mb-8 max-w-xl">
-                            Minimal, elegant, and bold — shop standout pieces curated for your lifestyle.
-                        </p>
-
-                        <a href="{{ route('shop') }}" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-orange-500 text-white text-sm sm:text-base font-semibold shadow-lg shadow-orange-500/25 hover:bg-orange-600 transition">
-                            View Collection
-                            <x-heroicon-o-arrow-right class="w-5 h-5" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="absolute bottom-8 right-4 sm:right-8 z-20 flex gap-3">
-                <button id="prevSlide" class="w-11 h-11 rounded-full bg-white/90 hover:bg-white shadow-md border border-white/70 flex items-center justify-center transition">
-                    <x-heroicon-o-chevron-left class="w-5 h-5 text-slate-800" />
-                </button>
-                <button id="nextSlide" class="w-11 h-11 rounded-full bg-white/90 hover:bg-white shadow-md border border-white/70 flex items-center justify-center transition">
-                    <x-heroicon-o-chevron-right class="w-5 h-5 text-slate-800" />
-                </button>
             </div>
         </div>
     </section>
 
     {{-- FEATURE BAR --}}
-    <section class="-mt-10 relative z-20">
+    <section class="mt-0 sm:-mt-10 relative z-20 hidden sm:block">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white/95 backdrop-blur rounded-[28px] shadow-[0_18px_60px_rgba(15,23,42,0.08)] border border-orange-100 p-6 lg:p-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 <div class="flex items-start gap-4">
@@ -181,10 +193,10 @@
                 </div>
             @endif
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
                 @forelse($products as $product)
-                    <div class="group bg-white rounded-[24px] overflow-hidden border border-slate-100 shadow-[0_12px_32px_rgba(15,23,42,0.06)] hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(15,23,42,0.10)] transition duration-300">
-                        <div class="relative h-64 overflow-hidden">
+                    <div class="group bg-white rounded-[20px] sm:rounded-[24px] overflow-hidden border border-slate-100 shadow-[0_12px_32px_rgba(15,23,42,0.06)] hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(15,23,42,0.10)] transition duration-300">
+                        <div class="relative h-44 sm:h-56 lg:h-64 overflow-hidden">
                             <img
                                 src="{{ $product->image ?: 'https://via.placeholder.com/600x600?text=Product' }}"
                                 alt="{{ $product->name }}"
@@ -192,47 +204,47 @@
                             >
 
                             @if($product->discount_price)
-                                <span class="absolute top-4 left-4 inline-flex items-center px-3 py-1 rounded-full bg-orange-500 text-white text-xs font-bold shadow-md">
+                                <span class="absolute top-3 left-3 sm:top-4 sm:left-4 inline-flex items-center px-2.5 sm:px-3 py-1 rounded-full bg-orange-500 text-white text-[10px] sm:text-xs font-bold shadow-md">
                                     Sale
                                 </span>
                             @endif
                         </div>
 
-                        <div class="p-5">
+                        <div class="p-3 sm:p-5">
                             @if($product->category)
-                                <p class="text-xs font-semibold uppercase tracking-[0.18em] text-orange-500 mb-2">
+                                <p class="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.16em] sm:tracking-[0.18em] text-orange-500 mb-1.5 sm:mb-2 line-clamp-1">
                                     {{ $product->category }}
                                 </p>
                             @endif
 
-                            <h3 class="text-lg font-bold text-slate-900 mb-3">
+                            <h3 class="text-sm sm:text-lg font-bold text-slate-900 mb-2 sm:mb-3 line-clamp-2 min-h-[40px] sm:min-h-[56px]">
                                 {{ $product->name }}
                             </h3>
 
-                            <div class="flex items-center gap-2 mb-4">
+                            <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mb-3 sm:mb-4">
                                 @if($product->discount_price)
-                                    <span class="text-xl font-black tracking-tight text-slate-900">
+                                    <span class="text-base sm:text-xl font-black tracking-tight text-slate-900">
                                         Tk {{ number_format($product->discount_price, 2) }}
                                     </span>
-                                    <span class="text-sm font-medium text-slate-400 line-through">
+                                    <span class="text-xs sm:text-sm font-medium text-slate-400 line-through">
                                         Tk {{ number_format($product->price, 2) }}
                                     </span>
                                 @else
-                                    <span class="text-xl font-black tracking-tight text-slate-900">
+                                    <span class="text-base sm:text-xl font-black tracking-tight text-slate-900">
                                         Tk {{ number_format($product->price, 2) }}
                                     </span>
                                 @endif
                             </div>
 
-                            <div class="flex items-center justify-between gap-3">
-                                <span class="text-sm text-slate-500">
+                            <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
+                                <span class="text-xs sm:text-sm text-slate-500">
                                     Stock: {{ $product->stock }}
                                 </span>
 
                                 <form action="{{ route('cart.add', $product) }}" method="POST">
                                     @csrf
                                     <button type="submit"
-                                        class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-orange-500 text-white text-sm font-semibold hover:bg-orange-600 transition shadow-sm">
+                                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-3 sm:px-4 py-2.5 rounded-full bg-orange-500 text-white text-xs sm:text-sm font-semibold hover:bg-orange-600 transition shadow-sm">
                                         <x-heroicon-o-shopping-cart class="w-4 h-4" />
                                         Add
                                     </button>
@@ -241,7 +253,7 @@
                         </div>
                     </div>
                 @empty
-                    <div class="col-span-1 sm:col-span-2 lg:col-span-4">
+                    <div class="col-span-2 lg:col-span-4">
                         <div class="bg-white rounded-[24px] border border-slate-200 p-10 text-center text-slate-500">
                             No products available right now.
                         </div>
@@ -355,46 +367,102 @@
     </footer>
 
     <script>
-        const mobileToggle = document.getElementById('mobileToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileToggle = document.getElementById('mobileToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
 
-        mobileToggle?.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        const slides = document.querySelectorAll('.slide');
-        const nextSlideBtn = document.getElementById('nextSlide');
-        const prevSlideBtn = document.getElementById('prevSlide');
-        let currentSlide = 0;
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                if (i === index) {
-                    slide.classList.remove('opacity-0', 'pointer-events-none');
-                    slide.classList.add('opacity-100');
-                } else {
-                    slide.classList.remove('opacity-100');
-                    slide.classList.add('opacity-0', 'pointer-events-none');
-                }
+            mobileToggle?.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
             });
-        }
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
+            const slider = document.getElementById('slider');
+            const slides = Array.from(document.querySelectorAll('#slider .slide'));
+            const nextSlideBtn = document.getElementById('nextSlide');
+            const prevSlideBtn = document.getElementById('prevSlide');
+            const dots = Array.from(document.querySelectorAll('.slider-dot'));
 
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
+            let currentSlide = 0;
+            let autoSlideInterval = null;
+            const slideDuration = 5000;
 
-        nextSlideBtn?.addEventListener('click', nextSlide);
-        prevSlideBtn?.addEventListener('click', prevSlide);
+            function updateDots(index) {
+                dots.forEach((dot, i) => {
+                    if (i === index) {
+                        dot.classList.remove('bg-white/50');
+                        dot.classList.add('bg-orange-500', 'w-8');
+                    } else {
+                        dot.classList.remove('bg-orange-500', 'w-8');
+                        dot.classList.add('bg-white/50');
+                    }
+                });
+            }
 
-        if (slides.length > 0) {
-            setInterval(nextSlide, 5000);
-        }
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.remove('opacity-0', 'pointer-events-none', 'z-0');
+                        slide.classList.add('opacity-100', 'z-10');
+                    } else {
+                        slide.classList.remove('opacity-100', 'z-10');
+                        slide.classList.add('opacity-0', 'pointer-events-none', 'z-0');
+                    }
+                });
+
+                updateDots(index);
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                const nextIndex = (currentSlide + 1) % slides.length;
+                showSlide(nextIndex);
+            }
+
+            function prevSlide() {
+                const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(prevIndex);
+            }
+
+            function startAutoSlide() {
+                stopAutoSlide();
+                if (slides.length > 1) {
+                    autoSlideInterval = setInterval(nextSlide, slideDuration);
+                }
+            }
+
+            function stopAutoSlide() {
+                if (autoSlideInterval) {
+                    clearInterval(autoSlideInterval);
+                    autoSlideInterval = null;
+                }
+            }
+
+            nextSlideBtn?.addEventListener('click', () => {
+                nextSlide();
+                startAutoSlide();
+            });
+
+            prevSlideBtn?.addEventListener('click', () => {
+                prevSlide();
+                startAutoSlide();
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                    startAutoSlide();
+                });
+            });
+
+            slider?.addEventListener('mouseenter', stopAutoSlide);
+            slider?.addEventListener('mouseleave', startAutoSlide);
+            slider?.addEventListener('touchstart', stopAutoSlide, { passive: true });
+            slider?.addEventListener('touchend', startAutoSlide, { passive: true });
+
+            if (slides.length > 0) {
+                showSlide(0);
+                startAutoSlide();
+            }
+        });
     </script>
 
 @endsection
