@@ -9,6 +9,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+
             $table->id();
             $table->string('name');
             $table->string('slug')->unique();
@@ -17,7 +19,7 @@ return new class extends Migration
             $table->string('category')->nullable();
             $table->decimal('price', 10, 2);
             $table->decimal('discount_price', 10, 2)->nullable();
-            $table->integer('stock')->default(0);
+            $table->unsignedInteger('stock')->default(0);
             $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
