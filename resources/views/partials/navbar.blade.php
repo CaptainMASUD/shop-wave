@@ -5,8 +5,13 @@
 <header class="sticky top-0 z-[200] bg-white/95 backdrop-blur border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div class="flex items-center justify-between h-20">
-            <a href="{{ route('home') }}" class="relative z-[220] text-2xl md:text-3xl font-extrabold tracking-tight">
-                Shop<span class="text-orange-600">Wave</span>
+            <a href="{{ route('home') }}" class="relative z-[220] inline-flex items-center">
+                <img
+                    src="{{ asset('logo/logo.png') }}"
+                    alt="Verdéllo Textiles"
+                    class="h-14 md:h-16 w-auto object-contain"
+                    loading="eager"
+                >
             </a>
 
             <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700">
